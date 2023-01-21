@@ -21,6 +21,9 @@ let history = [];
 playB.addEventListener("click", play);
 resetB.addEventListener("click", reset);
 chanceArea.textContent = `남은기회 : ${chances}번`;
+userN.addEventListener("focus", function(){
+  userN.value =""
+})
 
 function randomNum() {
   computeNum = Math.floor(Math.random() * 100) + 1;

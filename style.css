@@ -21,11 +21,22 @@ body {
     height: 24px;
     margin-right: 15px;
     margin-bottom: 10px;
+    outline: none;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 button {
     background-color: whitesmoke;
     padding: 8px;
     border-radius: 30px;
+    color: black;
+    font-weight: 700;
+    font-family: "SF Pro KR", "SF Pro Text", "Yoon Gothic", "Myriad Set Pro",
+      "SF Pro Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum",
+      "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
 .reset{
     display: flex;
@@ -34,4 +45,10 @@ button {
 }
 #chance_{
     margin-right: 20px;
+}
+button:hover{
+    transform: scale(1.08);
+}
+input:focus{
+    transform: scale(1.08);
 }
