@@ -34,20 +34,25 @@ randomNum();
 function play() {
   let userV = userN.value;
   if (userV < 1 || userV > 100) {
+    textArea.style.fontSize="1.3rem"
     textArea.textContent = "1~100 사이의 숫자를 입력해주세요.";
     return;
   }
   if (history.includes(userV)) {
+    textArea.style.fontSize="1.5rem"
     textArea.textContent = "이미 사용한 숫자입니다.";
     return;
   }
   chances--;
   chanceArea.textContent = `남은기회 : ${chances}번`
   if (userV > computeNum) {
+    textArea.style.fontSize="2rem"
     textArea.textContent = "Down!";
   } else if (userV < computeNum) {
+    textArea.style.fontSize="2rem"
     textArea.textContent = "Up!";
   } else {
+    textArea.style.fontSize="2rem"
     textArea.textContent = "정답!";
     gameOver = true;
     playB.disabled = true;
@@ -59,6 +64,7 @@ function play() {
   history.push(userV);
   if (gameOver) {
     playB.disabled = true;
+    textArea.style.fontSize="2rem"
     textArea.textContent = "꽝!";
   }
   console.log(chances)
@@ -66,6 +72,7 @@ function play() {
 function reset() {
   randomNum();
   chances = 5;
+  textArea.style.fontSize="1.5rem"
   textArea.textContent = "숫자를 입력해 주세요.";
   playB.disabled =false
   gameOver=false
